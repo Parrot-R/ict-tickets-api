@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /backend/
+
+# Route /backend/api/* to api/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/?(.*)$ api/index.php [QSA,L]
